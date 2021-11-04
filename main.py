@@ -1,5 +1,6 @@
 AddContact = input("Do you want to add a contact? (Y/N): ")
 
+
 #class definition
 class Contact:
 
@@ -10,23 +11,27 @@ class Contact:
         self.phonenumber = phonenumber
         self.birthdate = birthdate
 
-#adds contact adding
+#ontact adding
 while AddContact == "Y" :
 
-    c = Contact(input("Enter Name: "), input("Enter Address: "), input("Enter Phonenumber: "), input("Enter Birthdate: "))
-    t = (c.name, c.address, c.phonenumber, c.birthdate)
+    #input for adding contact
+    ContactInput = Contact(input("Enter Name: "), input("Enter Address: "), input("Enter Phonenumber: "), input("Enter Birthdate: "))
+    #stored to use later
+    ContactInputStore = (ContactInput.name, ContactInput.address, ContactInput.phonenumber, ContactInput.birthdate)
 
+    #opens and writes the contact to the file
     f = open("database.txt", "a")
-    f.write('\n' + str(t))
+    f.write('\n' + str(ContactInputStore))
     f.close
 
-    AddContact = input("Do you want to add a contact?: ")
-
+    AddContact = input("Do you want to add a contact?: (Y/N) ")
 
 else:
     SearchContact = input("Do you want to search through contacts? (Y/N): ")
 
 
+
+#searching for contact
 while SearchContact == "Y":
     search1 = input("What would you like to search for?: ")
     
@@ -42,3 +47,10 @@ while SearchContact == "Y":
 
 
     f1.close()
+
+else:
+    EditContact = input("Do you want to edit a contact? (Y/N): ")
+
+
+
+#while EditContact ==  "Y":
