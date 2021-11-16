@@ -1,3 +1,4 @@
+
 AddContact = input("Do you want to add a contact? (Y/N): ")
 
 
@@ -15,9 +16,9 @@ class Contact:
 while AddContact == "Y" :
 
     #input for adding contact
-    ContactInput = Contact(input("Enter Name: "), input("Enter Address: "), input("Enter Phonenumber: "), input("Enter Birthdate: "))
+    ContactInput = Contact(input("Enter Full Name: "), input("Enter Address: "), input("Enter Phonenumber: "), input("Enter Birthdate: "))
     #stored to use later
-    ContactInputStore = (ContactInput.name, ContactInput.address, ContactInput.phonenumber, ContactInput.birthdate)
+    ContactInputStore = ("Name: "+ContactInput.name, "Address: "+ContactInput.address, "Phonenumber:"+ContactInput.phonenumber, "Birthdate: "+ContactInput.birthdate)
 
     #opens and writes the contact to the file
     f = open("database.txt", "a")
@@ -53,4 +54,21 @@ else:
 
 
 
-#while EditContact ==  "Y":
+while EditContact ==  "Y":
+    OriginalVersion = input("What would you like to change?: ")
+
+    f2 = open("database.txt", "r")
+
+    for line in f2:
+        if OriginalVersion in line:
+            print(line)
+
+    EditedVersion = input("What would you like to change it to?: ")
+
+    with open("database.txt", "r") as file:
+        line2 = file.read()
+        line2 = line2.replace(OriginalVersion, EditedVersion)
+    with open("database.txt", "w") as file:
+        file.write(line2)
+
+    EditContact = "N"

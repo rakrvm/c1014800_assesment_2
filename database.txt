@@ -1,6 +1,6 @@
 Contacts:
-('Rehman', 'Thorntree', '0191', '16/07/2003')
-('Matthew', 'Throckley', '0191', '1/01/2001')
-('Harry', 'West Road', '0712', '2/02/2002')
-('Ben', 'West Road', '812', '3/03/2003')
-('Matthew', 'Denton Burn', '912', '3/03/2003')
+('Name: Matt', 'Address: Throckley', 'Phonenumber: 0191', 'Birhdate: 1/01/2001')
+('Name: Harry', 'Address: West Road', 'Phonenumber: 0712', 'Birthdate: 2/02/2002')
+('Name: Ben', 'Address: West Road', 'Phonenumber: 812', 'Birthdate: 3/03/2003')
+('Name: Matt', 'Address: Denton Burn', 'Phonenumber: 912', 'Birthdate: 3/03/2003')
+('Name: Mowgli', 'Address: Jungle', 'Phonenumber :07934', 'Birthdate: 09/11/12')
