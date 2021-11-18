@@ -15,8 +15,10 @@ class Contact:
 #ontact adding
 while AddContact == "Y" :
 
+    ##reference: https://www.w3schools.com/python/python_file_handling.asp
+
     #input for adding contact
-    ContactInput = Contact(input("Enter Full Name: "), input("Enter Address: "), input("Enter Phonenumber: "), input("Enter Birthdate: "))
+    ContactInput = Contact(input("Enter Full Name: "), input("Enter Postcode: "), input("Enter Phonenumber: "), input("Enter Birthdate DD/MM/YY: "))
     #stored to use later
     ContactInputStore = ("Name: "+ContactInput.name, "Address: "+ContactInput.address, "Phonenumber:"+ContactInput.phonenumber, "Birthdate: "+ContactInput.birthdate)
 
@@ -25,7 +27,8 @@ while AddContact == "Y" :
     f.write('\n' + str(ContactInputStore))
     f.close
 
-    AddContact = input("Do you want to add a contact?: (Y/N) ")
+    #restarts to add contact
+    AddContact = input("Do you want to add a contact? (Y/N): ")
 
 else:
     SearchContact = input("Do you want to search through contacts? (Y/N): ")
@@ -46,29 +49,35 @@ while SearchContact == "Y":
         if search1 in line:
             print(line)
 
-
+    #closes file
     f1.close()
+
+    SearchContact = input("Do you want to search through contacts? (Y/N): ")
 
 else:
     EditContact = input("Do you want to edit a contact? (Y/N): ")
 
 
-
+#contact editing
 while EditContact ==  "Y":
     OriginalVersion = input("What would you like to change?: ")
 
     f2 = open("database.txt", "r")
 
+    #searches text file for what the user inputted
     for line in f2:
         if OriginalVersion in line:
             print(line)
 
     EditedVersion = input("What would you like to change it to?: ")
 
+    #finds what the user inputted then replaces that with the new thing that the user wants to change it to
     with open("database.txt", "r") as file:
         line2 = file.read()
         line2 = line2.replace(OriginalVersion, EditedVersion)
     with open("database.txt", "w") as file:
         file.write(line2)
+
+    EditContact = input("Do you want to edit a contact? (Y/N): ")
 
     EditContact = "N"
