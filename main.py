@@ -81,3 +81,4 @@ while EditContact ==  "Y":
     EditContact = input("Do you want to edit a contact? (Y/N): ")
 
     EditContact = "N"
+
