@@ -1,6 +1,7 @@
 Contacts:
-('Name: Matt', 'Address: Throckley', 'Phonenumber: 0191', 'Birhdate: 1/01/2001')
-('Name: Harry', 'Address: West Road', 'Phonenumber: 0712', 'Birthdate: 2/02/2002')
-('Name: Ben', 'Address: West Road', 'Phonenumber: 812', 'Birthdate: 3/03/2003')
-('Name: Matt', 'Address: Denton Burn', 'Phonenumber: 912', 'Birthdate: 3/03/2003')
-('Name: Mowgli', 'Address: Jungle', 'Phonenumber :07934', 'Birthdate: 09/11/12')
+('Name: Matt Lilley', 'Address: Throckley', 'Phonenumber: 0191', 'Birhdate: 1/01/2001')
+('Name: Harry Wedge', 'Address: West Road', 'Phonenumber: 0712', 'Birthdate: 2/02/2002')
+('Name: Matthew Lilley', 'Address: West Road', 'Phonenumber: 812', 'Birthdate: 3/03/2003')
+('Name: Ben Avis', 'Address: Denton Burn', 'Phonenumber: 912', 'Birthdate: 3/03/2003')
+('Name: Rehman Akram', 'Address: Jungle', 'Phonenumber :07934', 'Birthdate: 09/11/12')
+('Name: Marcus Attibo', 'Address: Uni', 'Phonenumber:09191', 'Birthdate: 0910111')
